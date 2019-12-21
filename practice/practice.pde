@@ -4,6 +4,8 @@ void setup(){//this is called only first
 size(600, 400);
 background(255);
 
+//push test (because I changed github ID)
+
 //set instance
 sm = new Sample();
 //call member method
