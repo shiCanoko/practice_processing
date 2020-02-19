@@ -1,13 +1,15 @@
 Sample sm;
+Clock clock;
+void setup() {//this is called only first
+  size(600, 400);
+  background(255);
 
-void setup(){//this is called only first
-size(600, 400);
-background(255);
+  //set instance
+  sm = new Sample();
+  //call member method
+  sm.printNumber();
 
-//set instance
-sm = new Sample();
-//call member method
-sm.printNumber();
+  clock = new Clock(300, 150);
 }
 
 float x_1 = 150;
@@ -22,21 +24,21 @@ float x_3 = 300;
 float y_3 = 150;
 int r_3 = 180;
 
-void draw(){//this is called every frame
+void draw() {//this is called every frame
   fill(255, 10);
   noStroke();
   rect(0, 0, 600, 400);
   noFill();
-  
-  stroke(random(255), random(255), 255);
-  
-  ellipse(x_1 + random(-10, 10), y_1 + random(-10, 10), r_1, r_1);
-  
-  ellipse(x_2 + random(-10, 10), y_2 + random(-10, 10), r_2, r_2);
-  
-  ellipse(x_3 + random(-10, 10), y_3 + random(-10, 10), r_3, r_3);
-  
-//call member method
-//sm.printNumber();
 
+  stroke(random(255), random(255), 255);
+
+  ellipse(x_1 + random(-10, 10), y_1 + random(-10, 10), r_1, r_1);
+
+  ellipse(x_2 + random(-10, 10), y_2 + random(-10, 10), r_2, r_2);
+
+  ellipse(x_3 + random(-10, 10), y_3 + random(-10, 10), r_3, r_3);
+
+  clock.clockDraw();
+  //call member method
+  //sm.printNumber();
 }
