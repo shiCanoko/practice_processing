@@ -10,6 +10,14 @@ void setup() {//this is called only first
   sm.printNumber();
 
   clock = new Clock(300, 150);
+
+//push test (because I changed github ID)
+
+//set instance
+sm = new Sample();
+//call member method
+sm.printNumber();
+
 }
 
 float x_1 = 150;
