@@ -1,42 +1,29 @@
 Sample sm;
+Circle circle1;
+Circle circle2;
+Circle circle3;
 Clock clock;
-void setup() {//this is called only first
+
+void setup() {
+  //this is called only first
   size(600, 400);
   background(255);
 
   //set instance
   sm = new Sample();
+  circle1 = new Circle(150, 200, 180);
+  circle2 = new Circle(450, 200, 180);
+  circle3 = new Circle(300, 150, 180);
   clock = new Clock(300, 150);
   //call member method
   sm.printNumber();
 }
 
-float x_1 = 150;
-float y_1 = 200;
-int r_1= 180;
-
-float x_2 = 450;
-float y_2 = 200;
-int r_2 = 180;
-
-float x_3 = 300;
-float y_3 = 150;
-int r_3 = 180;
-
-void draw() {//this is called every frame
-  fill(255, 10);
-  noStroke();
-  rect(0, 0, 600, 400);
-  noFill();
-
-  stroke(random(255), random(255), 255);
-
-  ellipse(x_1 + random(-10, 10), y_1 + random(-10, 10), r_1, r_1);
-
-  ellipse(x_2 + random(-10, 10), y_2 + random(-10, 10), r_2, r_2);
-
-  ellipse(x_3 + random(-10, 10), y_3 + random(-10, 10), r_3, r_3);
-
+void draw() {
+  // call evey draw
+  circle1.circleDraw();
+  circle2.circleDraw();
+  circle3.circleDraw();
   clock.clockDraw();
   //call member method
   //sm.printNumber();

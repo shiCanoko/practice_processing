@@ -12,6 +12,8 @@ class Clock {
   }
 
   void clockDraw() {
+    //Confirm drawing
+    //print("clock called");
     s = map(second(), 0, 60, 0, TWO_PI) - HALF_PI;
     line(w, h, w + cos(s) * secondsRadius, h + sin(s) * secondsRadius);
   }
