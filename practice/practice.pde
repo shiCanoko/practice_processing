@@ -3,6 +3,7 @@ Circle circle1;
 Circle circle2;
 Circle circle3;
 Clock clock;
+Spirograph sp;
 
 void setup() {
   //this is called only first
@@ -15,6 +16,9 @@ void setup() {
   circle2 = new Circle(450, 200, 180);
   circle3 = new Circle(300, 150, 180);
   clock = new Clock(300, 150);
+  
+  //this parameter become flower
+  sp = new Spirograph(5,1,4);
   //call member method
   sm.printNumber();
 }
@@ -27,4 +31,5 @@ void draw() {
   clock.clockDraw();
   //call member method
   //sm.printNumber();
+  sp.spirographDraw();
 }
