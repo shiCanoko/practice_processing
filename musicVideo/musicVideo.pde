@@ -1,1 +1,5 @@
-Character character;
+void setup(){
+}
+
+void draw(){
+}
